@@ -1,0 +1,64 @@
+"""cervical cell classification"""
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cervical cell classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("images(1).png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images(1).png" alt="Maternal Health" style="width: 200px; height: auto;">
+        <h1>Cervical Cell Classification</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <button type="submit">Classify Image</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
